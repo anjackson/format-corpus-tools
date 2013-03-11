@@ -13,35 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-/**
- * 
- */
-package org.opf_labs.fmts.mimeinfo.droid;
+package org.apache.tika.mime;
 
 import java.util.List;
 
-import org.opf_labs.fmts.mimeinfo.Magic;
-import org.opf_labs.fmts.mimeinfo.MimeType;
-
 /**
- * @author pmay
+ * @author Andrew Jackson <Andrew.Jackson@bl.uk>
  *
  */
-public class DroidMimeType extends MimeType {
+public class TikaMimeType {
 
-	private List<String> sigIds;
+	public static List<Magic> getMagics(MimeType mt) {
+		return mt.getMagics();
+	}
 	
-	/**
-	 * @return the sigIds
-	 */
-	public List<String> getSigIds() {
-		return this.sigIds;
-	}
-
-	/**
-	 * @param sigIds the sigIds to set
-	 */
-	public void setSigIds(List<String> sigIds) {
-		this.sigIds = sigIds;
-	}
 }
